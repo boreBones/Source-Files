@@ -1,0 +1,9 @@
+The Dating Game READ ME
+by: Faizan Syed, Nastasia Hyam
+
+The heavily Modified LTexture is from this website:
+http://lazyfoo.net/tutorials/SDL/16_true_type_fonts/index.php
+
+To Win the Game:
+Press these choices in this order to win:
+2,2,1,1,1
