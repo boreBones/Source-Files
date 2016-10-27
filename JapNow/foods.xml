@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foods>
+    <food id="001">
+        <name>Sushi</name>
+        <imgSrc>../images/foodPicSushi.png</imgSrc>
+        <meat>Fish</meat>
+        <description>A dish that contains rice which has been prepared with raw 
+            fish and sushi vinegar</description>
+    </food>
+    <food id="002">
+        <name>Rice Bowl</name>
+        <imgSrc>../images/foodPicRiceBowl.png</imgSrc>
+        <meat>No Meat</meat>
+        <description>A bowl of plain cooked rice that is sometimes mixed with
+        soya sauce and raw egg.</description>
+    </food>
+    <food id="003">
+        <name>Ramen</name>
+        <imgSrc>../images/foodPicRamen.png</imgSrc>
+        <meat>Chicken, Beef, or Pork</meat>
+        <description>A noodle soup dish that consists of wheat noodles served 
+            in a meat broth, often flavored with soy sauce or miso.</description>
+    </food>
+    <food id="004">
+        <name>Udon</name>
+        <imgSrc>../images/foodPicUdon.png</imgSrc>
+        <meat>Fish or Vegtables</meat>
+        <description>A noodle dish that consists of thick wheat flour noodles 
+            served hot or cold usually with meat.</description>
+    </food>
+    <food id="005">
+        <name>Wagashi</name>
+        <imgSrc>../images/foodPicWagashi.png</imgSrc>
+        <meat>No Meat</meat>
+        <description>A confectionery dessert which is made of rice cakes, azuki 
+            bean paste, and fruits.</description>
+    </food>
+</foods>

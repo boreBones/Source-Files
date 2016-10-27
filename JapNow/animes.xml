@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animes>
+    <anime id="001">
+    <title>Bleach</title>
+    <totalEpisodes>366</totalEpisodes>
+    <genre>Action, Adventure</genre>
+    <imgSrc>../images/animePicBleach.png</imgSrc>
+    <summary>A high school boy named Ichigo Kurosaki has the special ability 
+        to see spirits has his life completely turned around when he a girl 
+        named Rukia.  Rukia is a soul reaper whose job is to allow souls 
+        from the world of the living to a place called the Soul Society.  
+        She does this by fighting lost souls called hollows that consume other 
+        people’s souls.  However, Rukia becomes severely injured after trying 
+        to save Ichigo from a hollow she was fighting.  Now Ichigo is left to 
+        fight this hollow before it consumes Ichigo’s soul.</summary>
+    </anime>
+    <anime id="002">
+    <title>Death Note</title>
+    <totalEpisodes>37</totalEpisodes>
+    <genre>Detective Fiction, Psychological Thriller, Supernatural</genre>
+    <imgSrc>../images/animePicDeathNote.png</imgSrc>
+    <summary>Light Yagami is a teenage genius that finds a book called 
+        “Death Note”.  The book claims that if a name is written then that 
+        person will die.  Light test this claim finding out that it is indeed 
+        true.  He then meet the Death Note’s previous owner a death god named 
+        Ryuk.  Light understanding the power he has starts to kill all the 
+        criminals in the world until there are only good people left on this 
+        earth.</summary>
+    </anime>
+    <anime id="003">
+    <title>Mobile Suit Gundam SEED Destiny</title>
+    <totalEpisodes>50</totalEpisodes>
+    <genre>Mecha, Military</genre>
+    <imgSrc>../images/animePicGundam.png</imgSrc>
+    <summary>Set two years after the show Mobile Suit Gundam SEED, the show 
+        follows a new character named Shinn Asuka a soldier from ZAFT. ZAFT 
+        is a group of humans who are genetically enhanced at birth.  ZAFT is 
+        about to enter into another war against the regular human race, the 
+        Naturals as Shin is preparing to fight.</summary>
+    </anime>
+    <anime id="004">
+    <title>Clannad After Story</title>
+    <totalEpisodes>23</totalEpisodes>
+    <genre>Romance, Tragedy</genre>
+    <imgSrc>../images/animePicClannad.png</imgSrc>
+    <summary>Tomoya is high school student who hates his life.  When he was 
+        young his mother passed away causing his father to get into alcohol 
+        and gambling to ease the pain.  This intern effects into becoming 
+        delinquent.  However one day he meets a girl named Nagisa and 
+        befriends her, with his life starts to change for the better.</summary>
+    </anime>
+    <anime id="005">
+    <title>Full Metal Alchemist</title>
+    <totalEpisodes>51</totalEpisodes>
+    <genre>Adventure, Science Fantasy</genre>
+    <imgSrc>../images/animePicFMA.png</imgSrc>
+    <summary>Brothers Edward and Alphonse Elric attempt to revive their dead 
+        mother back to life.  However things don’t go very bad and they both 
+        lose their bodies.  They are now made of machine and trying to find 
+        the philosopher’s stone to obtain their bodies. </summary>
+    </anime>
+    <anime id="006">
+    <title>Fruit Basket</title>
+    <totalEpisodes>26</totalEpisodes>
+    <genre>Fantasy, Romance</genre>
+    <imgSrc>../images/animePicFruitBasket.png</imgSrc>
+    <summary>Tohru Honda is an orphan girl who is fortunate enough to find a 
+        home with the Sohma family.  But she quickly learns that family is 
+        possessed by the 12 animals of the zodiac and have been cursed to 
+        turn into their animal forms when they are embraced by anyone of 
+        the opposite sex.</summary>
+    </anime>
+</animes>

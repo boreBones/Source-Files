@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<attractions>
+    <attraction id="001">
+        <name>Himeji</name>
+        <location>Himeji, Hyōgo</location>
+        <built>1333AD</built>
+        <imgSrc>../images/attractionPicCastle.png</imgSrc>
+        <summary>A hilltop Japanese castle that is regarded as one of the 
+            finest surviving example of prototypical Japanese castle 
+            architecture comprises a network of 83 different buildings with 
+            defensive systems from the feudal period of Japan.</summary>
+    </attraction>
+    <attraction id="002">
+        <name>DisneyLand Japan</name>
+        <location>Urayasu, Chiba</location>
+        <built>1983AD</built>
+        <imgSrc>../images/attractionPicDisney.png</imgSrc>
+        <summary>A theme park by the Walt Disney Company that have attractions 
+            that are based on the company’s movies such as Adventureland, 
+            Westernland, and Fantasyland.</summary>
+    </attraction>
+    <attraction id="003">
+        <name>Kinkakuji</name>
+        <location>Kyoto</location>
+        <built>1397AD</built>
+        <imgSrc>../images/attractionPicKinkakuji.png</imgSrc>
+        <summary>A Zen Buddhist temple that is against a beautiful pond.  The 
+            design of the temple known for its correlation between the 
+            building itself and the landscape around it allowing it to have 
+            a more minimalistic design.</summary>
+    </attraction>
+    <attraction id="004">
+        <name>Mount Fuji</name>
+        <location>Honshu Island</location>
+        <built>N/A</built>
+        <imgSrc>../images/attractionPicMountFuji.png</imgSrc>
+        <summary>A beautiful mountain that has inspired artist and poets from 
+            around the world.</summary>
+    </attraction>
+    <attraction id="005">
+        <name>Tokyo Tower</name>
+        <location>Shiba-koen, Minato</location>
+        <built>1958</built>
+        <imgSrc>../images/attractionPicTower.png</imgSrc>
+        <summary>A communication and observation tower that is the second 
+            tallest building in japan.  The structure was inspired by the 
+            Eiffel tower and is painted in white and orange.</summary>
+    </attraction>
+</attractions>

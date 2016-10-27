@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--Authors: James Mok(Monday PM) Faizen Syed-->
+<html>
+    <head>
+        <title>JapNow.com</title>
+        <meta charset="UTF-8">
+        <link href="../css/japnow.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="../scripts/language.js"></script>
+        <script type="text/javascript" src="../scripts/general.js"></script>
+        <script>
+
+            function play(text) {
+                var audio = new Audio();
+                audio.src = 'http://translate.google.com/translate_tts?tl=ja&q=' + text;
+                
+                setTimeout(function(){ audio.play();},1000 );
+            }
+        </script>
+
+
+    </head>
+    <body onload="makeRequest();">
+        <!-- Banner -->
+        <header>
+            <a href="../index.html"> 
+                <image alt="Banner" src="../images/banner.jpg">
+            </a>
+        </header>
+        <!-- Banner close -->
+
+        <!-- Main Navigation -->
+        <nav>
+            <a href="language.html">Phrases</a>
+            <a href="food.html">Food</a>
+            <a href="anime.html">Anime</a>
+            <a href="attractions.html">Attractions</a>
+        </nav>
+        <!-- Main Navigation close -->
+        <h2>
+            Translations and Phrases
+        </h2>
+        <!-- description begin -->
+    <u>
+        This is the translations page! Each translations provides the english,
+        japanese and the romanji!   You can click the links to hear what they sound like! (internet required)
+        Provided by Google Translate.
+    </u> <!--description close -->
+    <hr>
+    <!-- content -->
+    <article>
+        <table id="xmlTable">
+
+        </table>
+    </article> <!-- content close -->
+    <footer>
+        Copyright ©2014 James Mok and Faizan Syed
+    </footer>
+</body>
+</html>

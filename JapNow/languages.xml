@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--author James Mok-->
+<translations>
+    <translation id="001">
+        <english>Hello</english>
+        <japanese>こんにちは</japanese>
+        <romanji>Konichiwa</romanji>       
+    </translation>
+    <translation id="002">
+        <english>Good Morning</english>
+        <japanese>おはよう</japanese>
+        <romanji>Ohayou gozaimasu</romanji>
+    </translation>
+    <translation id="003">
+        <english>Good Evening</english>
+        <japanese>こんばんは</japanese>
+        <romanji>Konbanw</romanji>
+    </translation>
+    <translation id="004">
+        <english>Cute</english>
+        <japanese>かわいい</japanese>
+        <romanji>Kawaii</romanji>
+    </translation>
+    <translation id="005">
+        <english>You're welcome</english>
+        <japanese>どういたしまして</japanese>
+        <romanji>Dou itashi mashite</romanji>
+    </translation>
+    <translation id="006">
+        <english>Excuse me(I'm Sorry)</english>
+        <japanese>すみません</japanese>
+        <romanji>Sumimasen</romanji>
+    </translation>
+    <translation id="007">
+        <english>Sorry(for a mistake)</english>
+        <japanese>ごめんなさい</japanese>
+        <romanji>Gomenasai</romanji>
+    </translation>
+    <translation id="008">
+        <english>Thank you</english>
+        <japanese>ありがとう</japanese>
+        <romanji>Arigatou</romanji>
+    </translation>
+    <translation id="009">
+        <english>Goodbye</english>
+        <japanese>さようなら</japanese>
+        <romanji>Sayonara</romanji>
+    </translation>
+    <translation id="010">
+        <english>Congratulations</english>
+        <japanese>おめでとう</japanese>
+        <romanji>Omedetou</romanji>
+    </translation>
+    <translation id="011">
+        <english>What's your name?</english>
+        <japanese>お名前は何ですか？</japanese>
+        <romanji>Namae wa nandesu ka? </romanji>
+    </translation>
+    <translation id="012">
+        <english>How are you?</english>
+        <japanese>お元気ですか？</japanese>
+        <romanji>Ogenki desuka?</romanji>
+    </translation>
+</translations>
