@@ -1,0 +1,104 @@
+{
+    "product" :[
+        {
+            "prodNum" : "0019",
+            "prodDesc" : "Intel i7 Proccesor",
+            "prodAmt" : "450"
+        },
+		 {
+            "prodNum" : "0018",
+            "prodDesc" : "ATI Video Card",
+            "prodAmt" : "300"
+        },
+		{
+            "prodNum" : "0020",
+            "prodDesc" : "Boca Modem",
+            "prodAmt" : "250"
+        },
+		{
+            "prodNum" : "0021",
+            "prodDesc" : "BTC CD Drivers",
+            "prodAmt" : "25"
+        },
+		{
+            "prodNum" : "0022",
+            "prodDesc" : "Fujitsu Hard Drive",
+            "prodAmt" : "180"
+        },
+		{
+            "prodNum" : "0023",
+            "prodDesc" : "Infrared port",
+            "prodAmt" : "40"
+        },
+		{
+            "prodNum" : "0024",
+            "prodDesc" : "IntelliMouse",
+            "prodAmt" : "18"
+        },
+		{
+            "prodNum" : "0025",
+            "prodDesc" : "LED Monitors",
+            "prodAmt" : "220"
+        },
+		{
+            "prodNum" : "0026",
+            "prodDesc" : "Microphones",
+            "prodAmt" : "90"
+        },
+		{
+            "prodNum" : "0027",
+            "prodDesc" : "NEC Printer",
+            "prodAmt" : "35"
+        },
+		{
+            "prodNum" : "0028",
+            "prodDesc" : "USB pendrive",
+            "prodAmt" : "20"
+        },
+		{
+            "prodNum" : "0029",
+            "prodDesc" : "AMD Graphic Processor",
+            "prodAmt" : "210"
+        },
+		{
+            "prodNum" : "0030",
+            "prodDesc" : "Intel i3 Processor",
+            "prodAmt" : "200"
+        },
+		{
+            "prodNum" : "0031",
+            "prodDesc" : "Intel i5 Proccesor",
+            "prodAmt" : "350"
+        },
+		{
+            "prodNum" : "0032",
+            "prodDesc" : "HP Printer",
+            "prodAmt" : "35"
+        },
+		{
+            "prodNum" : "0033",
+            "prodDesc" : "8 GB RAM",
+            "prodAmt" : "110"
+        },
+		{
+            "prodNum" : "0034",
+            "prodDesc" : "Lenovo Laptop",
+            "prodAmt" : "750"
+        },
+		{
+            "prodNum" : "0035",
+            "prodDesc" : "Apple HardDrive Cable",
+            "prodAmt" : "40"
+        },
+		{
+            "prodNum" : "0036",
+            "prodDesc" : "Apple Superdrive",
+            "prodAmt" : "450"
+        },
+		{
+            "prodNum" : "0037",
+            "prodDesc" : "Power Supply",
+            "prodAmt" : "30"
+        }
+    ]
+}

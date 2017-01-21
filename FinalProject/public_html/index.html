@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+Final Project 
+By: Faizan Syed, Kiran Greawal, and Karen Dadwal
+-->
+<html>
+    <head>
+        <title>SellMore Ltd. Web App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="themes/MobileTheme.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="_js/jquery.js"></script>
+	<script src="_js/jquery.mobile.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+        <style>
+            html, body, #map-canvas {
+                height: 100%;
+                margin: 0px;
+                padding: 20px
+            }
+        </style>
+        <script type="text/javascript">
+            //Customer
+            $(document).ready(function() {     
+                $.ajax({       
+                    type: "GET",       
+                    url: "customer.json",       
+                    dataType: "json",             
+                    success: function(CustObject) {  
+                        var address;
+                        
+                        for (var i = 0; i < CustObject.customer.length; i++){
+                            
+                            $("#custMenu").append("<a href='#custMenu"+ CustObject.customer[i].compId +
+                                    "' class='ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow'>" + 
+                                    CustObject.customer[i].compName + "</a>");
+                            
+                            $("#background").append("<div id='custMenu"+ CustObject.customer[i].compId + "' data-role='page' data-theme='a'>"
+                                    + "<header data-role='header'><h2 class='ui-title'> " + CustObject.customer[i].compName + "</h2>"
+                                    + "<a href='#cust' class='ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow'>Customer List</a></header>"
+                                    + "<section id='custMenu" + i + "' class='ui-content' role='main'></section>"
+                                    + "<footer data-role='footer'><h3>&copy;SellMore Company Ltd.</h3></footer>"
+                                    + "</div>");
+                            
+                            $("#custMenu" + i).append("<h4>Customer Info:</h4>Company ID: " + CustObject.customer[i].compId 
+                                    + "<br>Company Name: " + CustObject.customer[i].compName
+                                    + "<br>Company Address: " + CustObject.customer[i].compAddr
+                                    + "<br>Company Contact: " + CustObject.customer[i].compContact
+                                    + "<br><br><a href='tel:+1" + CustObject.customer[i].compPhone + "'>PhoneNumber</a>"
+                                    + "<br><a href='mailto:" + CustObject.customer[i].compEmail + "' target='_top'>Email</a>"
+                                    + "<h4>Invoices:</h4>");
+                            
+                            for (var n = 0; n < CustObject.customer[i].invNum.length; n++){
+                                $("#custMenu" + i).append("<a href='#invMenu" + CustObject.customer[i].invNum[n] + "'>" + CustObject.customer[i].invNum[n] + "</a><br>");
+                            }
+                            
+                            //assigning current customer's address to a variable "address"
+                            address = CustObject.customer[i].compAddr;
+                            
+                            //mapping
+                            $("#custMenu" + i).append("<div id='map_canvas" + i + "' style='height:500px; width:800px; border:4px solid black'> </div>");
+                            success(address,i);
+                            
+                        }
+                    }
+                });
+                
+                //function to get map of the address provided
+                function success(address,z) {
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({'address': address}, function (results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            var myLatLng = results[0].geometry.location;
+                            lat = results[0].geometry.location.lat();
+                            lng = results[0].geometry.location.lng();
+
+                        }
+                        mapCenter = new google.maps.LatLng(lat, lng);
+                        var mapOptions = {
+                            center: mapCenter,
+                            zoom: 18,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+
+                        //  Display address on map
+                        var map = new google.maps.Map(document.getElementById("map_canvas" + z), mapOptions);
+                        var panoramaOptions = {
+                            position: mapCentre,
+                            pov: {
+                                heading: 34,
+                                pitch: 10
+                            }
+                        };
+                        //  Display map marker
+                        var myLoc = new google.maps.Marker({
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            position: mapCentre
+                        });
+                        
+                        google.maps.event.addListener(myLoc, "onload", function () {
+                            info.open(map, myLoc);
+                        });
+                        
+                    });
+    };
+            });
+            //Invoice
+            $(document).ready(function() {     
+                $.ajax({       
+                    type: "GET",       
+                    url: "invoice.json",       
+                    dataType: "json",             
+                    success: function(InvObject) {          
+                        for (var i = 0; i < InvObject.invoice.length; i++){
+                            $("#invMenu").append("<a href='#invMenu"+ InvObject.invoice[i].invNum +
+                                    "' class='ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow'>" + 
+                                    InvObject.invoice[i].invNum + "</a>");
+                            
+                            $("#background").append("<div id='invMenu"+ InvObject.invoice[i].invNum + "' data-role='page' data-theme='a'>"
+                                    + "<header data-role='header'><h2 class='ui-title'> " + InvObject.invoice[i].invNum + "</h2>"
+                                    + "<a href='#inv' class='ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow'>Invoice List</a></header>"
+                                    + "<section id='invMenu" + i + "' class='ui-content' role='main'></section>"
+                                    + "<footer data-role='footer'><h3>&copy;SellMore Company Ltd.</h3></footer>"
+                                    + "</div>");
+                            
+                            $("#invMenu" + i).append("<h4>Invoice Info:</h4>Invoice #: " + InvObject.invoice[i].invNum
+                                    + "<br>Invoice Date: " + InvObject.invoice[i].invDate
+                                    + "<br>Invoice Total Amount: $" + InvObject.invoice[i].invAmt
+                                    + "<br>Company ID: <a href='#custMenu" + InvObject.invoice[i].compId + "'>" + InvObject.invoice[i].compId + "</a>"
+                                    + "<h4>Products Bill:</h4>");
+                            
+                            for (var n = 0; n < InvObject.invoice[i].invProd.length; n++){
+                                $("#invMenu" + i).append("<a href='#prodMenu" + InvObject.invoice[i].invProd[n].prodId + "'>" + InvObject.invoice[i].invProd[n].prodId 
+                                        + "</a>: $" + InvObject.invoice[i].invProd[n].amt + "<br>"); 
+                            }
+                        }
+                    }
+                });
+            });
+            //Product
+            $(document).ready(function() {     
+                $.ajax({       
+                    type: "GET",       
+                    url: "product.json",       
+                    dataType: "json",             
+                    success: function(ProdObject) {          
+                        for (var i = 0; i < ProdObject.product.length; i++){
+                            $("#prodMenu").append("<a href='#prodMenu"+ ProdObject.product[i].prodNum +
+                                    "' class='ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow'>" + 
+                                    ProdObject.product[i].prodDesc + "</a>");
+                            
+                            $("#background").append("<div id='prodMenu"+ ProdObject.product[i].prodNum + "' data-role='page' data-theme='a'>"
+                                    + "<header data-role='header'><h2 class='ui-title'> " + ProdObject.product[i].prodDesc + "</h2>"
+                                    + "<a href='#inv' class='ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow'>Product List</a></header>"
+                                    + "<section id='prodMenu" + i + "' class='ui-content' role='main'></section>"
+                                    + "<footer data-role='footer'><h3>&copy;SellMore Company Ltd.</h3></footer>"
+                                    + "</div>");
+                            
+                            $("#prodMenu" + i).append("<h4>Invoice Info:</h4>Product #: " + ProdObject.product[i].prodNum
+                                    + "<br>Product Description: " + ProdObject.product[i].prodDesc
+                                    + "<br>Product Cost: $" + ProdObject.product[i].prodAmt);
+                        }
+                    }
+                });
+                
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="background">
+            <div id="main" data-role="page" data-theme="a">
+                <header data-role="header">
+                    <h2 class="ui-title">Final Project</h2>
+                </header>
+                <section class="ui-content" role="main" >
+                    <a href="#cust" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow">Customers</a>
+                    <a href="#inv" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow">Invoices</a>
+                    <a href="#prod" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow">Products</a>
+                </section>
+                <footer data-role="footer">
+                   <h3>&copy;SellMore Company Ltd.</h3>    
+                </footer>
+            </div>
+        
+            <div id="cust" data-role="page" data-theme="a">
+                <header data-role="header">
+                    <h2 class="ui-title">Customers List</h2>
+                    <a href="#main" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow">Main Page</a>
+                </header>
+                <section id="custMenu" class="ui-content" role="main" ></section>
+                <footer data-role="footer">
+                    <h3>&copy;SellMore Company Ltd.</h3>    
+                </footer>
+            </div>
+            
+            <div id="inv" data-role="page" data-theme="a">
+                <header data-role="header">
+                    <h2 class="ui-title">Invoice List</h2>
+                    <a href="#main" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow">Main Page</a>
+                </header>
+                <section id="invMenu" class="ui-content" role="main" ></section>
+                <footer data-role="footer">
+                    <h3>&copy;SellMore Company Ltd.</h3>    
+                </footer>
+            </div>
+            
+            <div id="prod" data-role="page" data-theme="a">
+                <header data-role="header">
+                    <h2 class="ui-title">Product List</h2>
+                    <a href="#main" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow">Main Page</a>
+                </header>
+                <section id="prodMenu" class="ui-content" role="main" ></section>
+                <footer data-role="footer">
+                    <h3>&copy;SellMore Company Ltd.</h3>    
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+{
+    "customer" :[
+        {
+            "compId" : "D392W",
+            "compName" : "FAM Construction INC",
+            "compAddr" : "5302 Lismic blvd Mississauga",
+            "compContact" : "Faizan Syed",
+            "compPhone" : "9053544455",
+            "compEmail" : "contact@FAMConst.com",
+            "invNum" :["103","009","018","017","014"]
+        },{
+            "compId" : "A789S",
+            "compName" : "ACME Painters INC",
+            "compAddr" : "78 University Avenue Toronto",
+            "compContact" : "Peter Holmes",
+            "compPhone" : "6478965598",
+            "compEmail" : "contact@ACMEpaints.com",
+            "invNum" : ["010","019","015","016","416"]	
+	},{
+            "compId" : "W453G",
+            "compName" : "Reliance Companies INC",
+            "compAddr" : "1 Steels Avenue East Brampton",
+            "compContact" : "Andrew Kurt",
+            "compPhone" : "9057893699",
+            "compEmail" : "contact@RCompanies.com",
+            "invNum" : ["011","352","001","999","111"]	
+        },{
+            "compId" : "E345P",
+            "compName" : "Sunlife Solutions INC",
+            "compAddr" : "900 Boulevard René-Lévesque O Montréal",
+            "compContact" : "Susan Wheeler",
+            "compPhone" : "4168597789",
+            "compEmail" : "contact@Sunlife.ca",
+            "invNum" : ["012","002","020","007","008"]	
+	},{
+            "compId" : "B400Q",
+            "compName" : "Slayer Technogies",
+            "compAddr" : "325 Front Street West Toronto",
+            "compContact" : "Sarah Duggan",
+            "compPhone" : "2895671120",
+            "compEmail" : "helpdesk@slayer.ca",
+            "invNum" : ["013","006","005","004","003"]	
+	}
+    ]
+}
